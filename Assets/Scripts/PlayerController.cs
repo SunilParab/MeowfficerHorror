@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+namespace PlayerControls {
+
 public class PlayerController : MonoBehaviour
 {
     //Movement Variables
@@ -19,14 +21,12 @@ public class PlayerController : MonoBehaviour
     
     //Input systems
     InputAction moveAction;
-    InputAction interactAction;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
-        interactAction = InputSystem.actions.FindAction("Interact");
     }
 
     void Update()
@@ -55,10 +55,13 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider collision) {
+    void OnCollisionEnter(Collision collision) {
         GameObject other = collision.gameObject;
-        score += other.tag.Equals("Coin") ? 5 : -10;
-        Destroy(other);
+        if (other.tag.Equals("Enemy")) {
+            //die
+        }
     }
+
+}
 
 }

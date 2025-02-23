@@ -1,5 +1,7 @@
 using UnityEngine;
 
+namespace PlayerControls {
+
 public class CameraController : MonoBehaviour
 {
     [SerializeField]
@@ -15,4 +17,6 @@ public class CameraController : MonoBehaviour
 
         transform.localEulerAngles = new Vector3(verticalRotation, 0, 0);
     }
+}
+
 }
