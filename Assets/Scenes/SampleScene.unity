@@ -356,6 +356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 209361483}
+  - component: {fileID: 209361484}
   m_Layer: 0
   m_Name: Fish Spawner
   m_TagString: Untagged
@@ -378,6 +379,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &209361484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209361482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7de4cf8b754fa45aca5a7dab1050f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishPrefab: {fileID: 6435745282539245180, guid: 37858efe397d81145ae66f4951591b0d, type: 3}
+  timer: 5
+  spawnRange: 9
+  spawnHeight: 1
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1077,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1
   m_Speed: 5
-  m_Acceleration: 1
+  m_Acceleration: 2
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -1409,7 +1426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041483645451511191, guid: 37858efe397d81145ae66f4951591b0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3794011
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6041483645451511191, guid: 37858efe397d81145ae66f4951591b0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1458,8 +1475,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 950124113}
   - {fileID: 567246037}
   - {fileID: 1572167618}
-  - {fileID: 950124113}
   - {fileID: 209361483}
   - {fileID: 7090627502850160897}

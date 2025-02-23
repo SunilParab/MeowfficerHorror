@@ -1,3 +1,4 @@
+using Behaviors;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -57,8 +58,15 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) {
         GameObject other = collision.gameObject;
-        if (other.tag.Equals("Enemy")) {
+        if (other.CompareTag("Enemy")) {
             //die
+        }
+    }
+
+    void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Fish")) {
+            SnertBehavior.reference.Pacify();
+            Destroy(other.gameObject);
         }
     }
 

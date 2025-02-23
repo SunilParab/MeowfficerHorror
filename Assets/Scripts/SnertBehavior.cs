@@ -14,6 +14,11 @@ public class SnertBehavior : MonoBehaviour
     float pacifyTime = 5;
     [SerializeField]
     bool friendly = false;
+    public static SnertBehavior reference;
+
+    void Awake() {
+        reference = this;  
+    }
 
     //Find camera
     void Start()
