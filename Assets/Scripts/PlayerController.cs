@@ -1,6 +1,7 @@
 using Behaviors;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace PlayerControls {
 
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision collision) {
         GameObject other = collision.gameObject;
         if (other.CompareTag("Enemy")) {
-            //die
+            SceneManager.LoadScene( SceneManager.GetActiveScene().name );
         }
     }
 
